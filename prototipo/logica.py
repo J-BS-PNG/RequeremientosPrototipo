@@ -14,9 +14,9 @@ class Indice:
     # Funcion que recibe un criterio de busqueda creando el
     # indice 
     def indexar(self, criterioDeBusqueda):
-        textoTokemizado = word_tokenize(criterioDeBusqueda)
+        textoTokemizado = word_tokenize(criterioDeBusqueda.lower())
         filtrandoPalabras = [palabra for palabra in textoTokemizado if not palabra in string.punctuation]
-        filtrandoPalabras = [palabra.lower() for palabra in filtrandoPalabras if not palabra in self.stopWords] 
+        filtrandoPalabras = [palabra for palabra in filtrandoPalabras if not palabra in self.stopWords] 
         return [self.stemmer.stem(palabra) for palabra in filtrandoPalabras]
 
 def main():
