@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+
+{% block docs %}
+{% for documento in datos %}
+            <button class="button-body" type="button">{{ documento }}</button>
+{% endfor %}
+{% endblock %}

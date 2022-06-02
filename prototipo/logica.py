@@ -23,7 +23,7 @@ def main():
     crearIndice = Indice()
     listaIndices = crearIndice.indexar("Hola mundo, comiendo para comer")
     #Buscar()
-    print(listaIndices)
+    print(listaIndices, )
 
 if __name__ == "__main__":
     main()
