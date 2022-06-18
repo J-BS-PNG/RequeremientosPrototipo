@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block docs %}
-{% for documento in datos %}
+{% for documento in datos[0] %}
             <button class="button-body" type="button">{{ documento }}</button>
 {% endfor %}
 {% endblock %}

@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<body>
    <div class="container">
      <div class="login-container">
        <div class="register">
@@ -20,6 +19,6 @@
      </div>
    </div>
   {% if datos == [] %}
-   <script>alert('Error: Se el campo del nombre no puede estar en blanco')</script>
+   <script>alert('Error: El campo del nombre no puede estar en blanco')</script>
   {% endif %}
 {% endblock %}

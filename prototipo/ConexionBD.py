@@ -2,11 +2,13 @@ from collections import OrderedDict
 
 dicIndices = {  'mund': ['volcanes.pdf', 'naturaleza.pdf'], 
                 'verd': ['pintura_organica.pdf', 'naturaleza.pdf'], 
-                'tecnolog': ['Oracle.pdf', 'CSS.pdf'], 
-                'requer': ['Oracle.pdf', 'clean_Code.pdf']}
+                'tecnolog': ['Oracle.pdf', 'CSS.pdf', 'SQL.pdf', 'Estructuras de datos.pdf'], 
+                'requer': ['Oracle.pdf', 'clean_Code.pdf'],
+                'tierr': ['mundo.pdf', 'volcanes.pdf'],
+                'salt': ['100cm.pdf', 'Dejate caer.pdf'],
+                'vaci': ['Espacio.pdf', 'NASA.pdf']}
 
 def buscar(listaIndices):
-    file = open('datos.txt')
     dicSalida = {}
     for indice in listaIndices:
         if indice in dicIndices:
@@ -16,12 +18,13 @@ def buscar(listaIndices):
                 else:
                     dicSalida.update({documento : 1})
 
-    return sorted(dicSalida.items())
+    return OrderedDict(sorted(dicSalida.items()))
 
 
 def main():
     valor = buscar(['requer', 'tecnologi'])
-    print(valor)
+    for n in valor.values():
+        print(n)
 
 if __name__ == "__main__":
     main()
